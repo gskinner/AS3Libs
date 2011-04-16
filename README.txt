@@ -1,5 +1,7 @@
 ﻿A collection of AS3 libraries and sketches I have built over the years. At present, many of the folders are empty, as I am in the process of retesting and cleaning up the different items as I add them.
 
+All class files are released under MIT. Other assets are copyright their respective copyright holders.
+
 Here is a list of the libraries you will find here:
 
 ** ColorMatrix **
