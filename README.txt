@@ -4,15 +4,6 @@ All class files are released under MIT. Other assets are copyright their respect
 
 Here is a list of the libraries you will find here:
 
-** ColorMatrix **
-Provides common color adjustment methods for use with ColorMatrixFilter. Uses the same math as the Flash Pro IDE's Adjust Color filter.
-
-** SharpenFilter **
-Extends and abstracts ConvolutionFilter to provide an easy to use sharpen filter.
-
-
-These are libraries I plan to commit soon:
-
 ** _Sketches **
 Smaller sketches that are incomplete or less significant, but still worth sharing.
 	* CurvedLines: draws curves from a series of points
@@ -34,6 +25,9 @@ Simple library for breaking intensive tasks up across frames (simple green threa
 ** CollisionDetection **
 Shape based collision detection.
 
+** ColorMatrix **
+Provides common color adjustment methods for use with ColorMatrixFilter. Uses the same math as the Flash Pro IDE's Adjust Color filter.
+
 ** FireFX **
 Creates animated fire effects on any display object.
 
@@ -51,6 +45,9 @@ Grid based proximity system for tracking the distance between large numbers of s
 
 ** Rndm **
 Provides simple methods for working with random values, such as Rndm.float(min, max), and Rndm.sign(). Also includes a seeded random version.
+
+** SharpenFilter **
+Extends and abstracts ConvolutionFilter to provide an easy to use sharpen filter.
 
 ** TextFlow **
 Enables multi-field text using TextFields for applications like multicolumn text and flowing text around an image. Multiple versions with different capabilities.
