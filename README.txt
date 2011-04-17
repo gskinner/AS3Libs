@@ -20,7 +20,7 @@ Smaller sketches that are incomplete or less significant, but still worth sharin
 A collection of tools for working with webcam input.
 
 ** Chunker **
-Simple library for breaking intensive tasks up across frames (simple green threads).
+Simple library for breaking intensive tasks up across frames to maintain UI responsiveness (simple green threads).
 
 ** CollisionDetection **
 Shape based collision detection.
