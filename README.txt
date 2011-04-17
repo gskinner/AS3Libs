@@ -23,7 +23,7 @@ A collection of tools for working with webcam input.
 Simple library for breaking intensive tasks up across frames to maintain UI responsiveness (simple green threads).
 
 ** CollisionDetection **
-Shape based collision detection.
+Pixel-perfect shape based collision detection.
 
 ** ColorMatrix **
 Provides common color adjustment methods for use with ColorMatrixFilter. Uses the same math / values as the Flash Pro IDE's "Adjust Color" filter.
