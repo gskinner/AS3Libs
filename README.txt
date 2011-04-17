@@ -26,7 +26,7 @@ Simple library for breaking intensive tasks up across frames to maintain UI resp
 Shape based collision detection.
 
 ** ColorMatrix **
-Provides common color adjustment methods for use with ColorMatrixFilter. Uses the same math as the Flash Pro IDE's Adjust Color filter.
+Provides common color adjustment methods for use with ColorMatrixFilter. Uses the same math / values as the Flash Pro IDE's "Adjust Color" filter.
 
 ** FireFX **
 Creates animated fire effects on any display object.
