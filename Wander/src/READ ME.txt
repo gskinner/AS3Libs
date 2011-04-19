@@ -1,0 +1,1 @@
+WanderTest.as and WanderFollow.as will work as ActionScript projects without modifications.
