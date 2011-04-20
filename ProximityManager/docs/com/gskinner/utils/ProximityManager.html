@@ -1,0 +1,282 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../print.css" type="text/css" media="print">
+<meta content="ProximityManager,com.gskinner.utils.ProximityManager,addItemsImmediately,items,addItem,getNeighbors,removeItem,update" name="keywords">
+<title>com.gskinner.utils.ProximityManager</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'ProximityManager - API Documentation';
+				var baseRef = '../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../all-classes.html')" href="../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../all-classes.html')" href="../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../index-list.html')" href="../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../index.html?com/gskinner/utils/ProximityManager.html&amp;com/gskinner/utils/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;ProximityManager</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class ProximityManager"); titleBar_setSubNav(false,true,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.gskinner.utils</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class ProximityManager</td>
+</tr>
+</table>
+<p></p>
+  <b>ProximityManager ©2009 Grant Skinner, gskinner.com. Visit www.gskinner.com/blog/ for documentation, updates and more free code. Licensed under the MIT license - see the source file header for more information.</b>
+  <hr/>
+  Uses grid based proximity to quickly return coarse neighbors of a display object in systems with large numbers of items. It has a linear growth pattern for processing time,
+  versus an exponential growth pattern for simpler compare all to all approaches. For example, in a system with 5000 items, it would require nearly 12.5 million iterations to
+  compare each item's distance directly. With this library it only requires 5000 iterations. While the cost per iteration is higher with grid based proximity, that cost is quickly 
+  made insignificant as you add more items.
+  <br/><br/>
+  This class also offers optional item list management methods. These are significant in that they support the removal and addition of items between updates. An item removed with removeItem() after update() was called
+  will not be returned in subsequent getNeighbor calls.
+  <p></p>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#addItemsImmediately">addItemsImmediately</a> : Boolean = false<div class="summaryTableDescription"> 
+   If true, items will be included in getNeighbor calls immediately when they are added.</div>
+</td><td class="summaryTableOwnerCol">ProximityManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#items">items</a> : Vector<div class="summaryTableDescription">
+   The list of items currently being tracked in the system.</div>
+</td><td class="summaryTableOwnerCol">ProximityManager</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#ProximityManager()">ProximityManager</a>(gridSize:Number, bounds:Rectangle)</div>
+<div class="summaryTableDescription"> Constructs a new ProximityManager instance </div>
+</td><td class="summaryTableOwnerCol">ProximityManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#addItem()">addItem</a>(item:DisplayObject):void</div>
+<div class="summaryTableDescription">
+   Adds an item to track.</div>
+</td><td class="summaryTableOwnerCol">ProximityManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getNeighbors()">getNeighbors</a>(item:DisplayObject, radius:uint = 1, resultVector:Vector = null):Vector</div>
+<div class="summaryTableDescription">
+   Returns the list of neighbors for the specified item.</div>
+</td><td class="summaryTableOwnerCol">ProximityManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#removeItem()">removeItem</a>(item:DisplayObject):void</div>
+<div class="summaryTableDescription">
+   Removes an item from the system.</div>
+</td><td class="summaryTableOwnerCol">ProximityManager</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#update()">update</a>():void</div>
+<div class="summaryTableDescription">
+   Updates the positions of all items on the grid.</div>
+</td><td class="summaryTableOwnerCol">ProximityManager</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="addItemsImmediately"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">addItemsImmediately</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var addItemsImmediately:Boolean = false</code><p> 
+   If true, items will be included in getNeighbor calls immediately when they are added.
+   If false, they will not be included until the next time update() is called.
+   </p></div>
+<a name="items"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">items</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>items:Vector</code>&nbsp;&nbsp;[read-write]<p>
+   The list of items currently being tracked in the system. You can use this to quickly pass in a list of
+   existing items, or retrieve the current list. It is recommended to use the addItem and removeItem methods
+   for minor modifications to the list.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get items():Vector</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set items(value:Vector):void</code>
+<br>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor detail</div>
+<a name="ProximityManager()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">ProximityManager</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function ProximityManager(gridSize:Number, bounds:Rectangle)</code><p> Constructs a new ProximityManager instance </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">gridSize</span>:Number</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">bounds</span>:Rectangle</code></td>
+</tr>
+</table>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="addItem()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">addItem</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function addItem(item:DisplayObject):void</code><p>
+   Adds an item to track. If addItemsImmediately is true, it will immediately
+   be inserted into the active grid, if not, it will be inserted the next time update() is called.
+   <b>Note that removing and adding an item within the same update with addItemsImmediately can cause problems with duplicate returns.</b>
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">item</span>:DisplayObject</code></td>
+</tr>
+</table>
+</div>
+<a name="getNeighbors()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getNeighbors</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getNeighbors(item:DisplayObject, radius:uint = 1, resultVector:Vector = null):Vector</code><p>
+   Returns the list of neighbors for the specified item. Neighbours are items in grid positions within radius positions away from the item.
+   For example, a radius of 0 returns only items in the same position. A radius of 1 returns 9 positions (the center, + the 8 positions 1 position away).
+   A radius of 2 returns 25 positions. It is generally recommended to only use a radius of 1, but there are occasional use cases that may benefit from using
+   a radius of 2.
+   <br/><br/>
+   It is important to note that this is a coarse set of neighbors. Their distance from the target item varies depending on their location within their grid position.
+   This is allows you to exclude items that are too far away, then use more accurate comparisions (like pythagoram distance calculations or hit tests) on the
+   smaller set of items.
+   <br/><br/>
+   You can specify a resultVector to avoid the need for ProximityManager to instantiate a new Vector each time you call getNeighbors. Results will be appended
+   to the end of the vector. You may want to clear the vector with myVector.length = 0 before reusing it.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">item</span>:DisplayObject</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">radius</span>:uint</code> (default = <code>1</code>)<code></code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">resultVector</span>:Vector</code> (default = <code>null</code>)<code></code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Vector</code></td>
+</tr>
+</table>
+</div>
+<a name="removeItem()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">removeItem</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function removeItem(item:DisplayObject):void</code><p>
+   Removes an item from the system. It will not be returned in any subsequent getNeighbors() calls.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">item</span>:DisplayObject</code></td>
+</tr>
+</table>
+</div>
+<a name="update()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">update</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function update():void</code><p>
+   Updates the positions of all items on the grid. Call this when items have moved, but not after achitem moves.
+   For example, if you have a number of sprites moving around on screen each frame, move them all, then call update() once per frame.
+   </p></div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> 
+</center>
+</div>
+</body>
+</html>
+<!-- -->
