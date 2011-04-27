@@ -1,0 +1,1 @@
+﻿package  {		public class HexTile {			// Constants:			// Public Properties:		public var art:uint=1;			// Protected Properties:			// Initialization:		public function HexTile(art:uint=1) {			this.art = art;		}			// Public getter / setters:			// Public Methods:			// Protected Methods:			}	}
