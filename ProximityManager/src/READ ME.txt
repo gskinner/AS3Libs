@@ -1,1 +1,0 @@
-ProximityTest.as will work as an ActionScript project without modifications.
