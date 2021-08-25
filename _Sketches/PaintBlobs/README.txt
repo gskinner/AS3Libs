@@ -1,1 +1,0 @@
-Sketch for drawing paint blobs. Uses logic from CurvedLines sketch.
